@@ -12,6 +12,9 @@ public class PlayerControl : MonoBehaviour {
 	float XMouseDelta = 0f;
 	float YMouseDelta = 0f;
 
+	float ballPitch = 1f;
+	float ballVolume = 1f;
+
 	// Use this for initialization
 	void Start () {
 		rb = transform.GetComponent<Rigidbody>();
@@ -36,6 +39,22 @@ public class PlayerControl : MonoBehaviour {
 		}
 
 		//Debug.Log(rb.velocity);
+
+		if(rb.velocity.sqrMagnitude > 0f) {
+			if(!Fabric.EventManager.Instance.IsEventActive("SFX/Ball/Roll", gameObject)) {
+				Fabric.EventManager.Instance.PostEvent("SFX/Ball/Roll", gameObject);
+			}
+		} else {
+			Fabric.EventManager.Instance.PostEvent("SFX/Ball/Roll", Fabric.EventAction.StopSound, gameObject);
+		}
+		//Debug.Log("Velocity: " +rb.velocity.sqrMagnitude);
+		var squaredNumber = 10f;
+		ballPitch = Mathf.Clamp ( 0.5f + ((rb.velocity.sqrMagnitude / (squaredNumber*squaredNumber)) * (rb.velocity.sqrMagnitude / (squaredNumber*squaredNumber))), 0.5f, 3.5f);
+		Debug.Log("Pitch: " +ballPitch);
+		//ballVolume = Mathf.Clamp ( 0.5f + ((rb.velocity.sqrMagnitude / (squaredNumber*squaredNumber)) * (rb.velocity.sqrMagnitude / (squaredNumber*squaredNumber))), 0.5f, 10f);
+		//Debug.Log("Volume: " +ballVolume);
+		Fabric.EventManager.Instance.PostEvent("SFX/Ball/Roll", Fabric.EventAction.SetPitch, ballPitch , gameObject);
+		Fabric.EventManager.Instance.PostEvent("SFX/Ball/Roll", Fabric.EventAction.SetVolume, ballVolume , gameObject);
 	
 	}
 
