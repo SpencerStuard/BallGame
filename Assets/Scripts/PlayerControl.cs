@@ -96,5 +96,10 @@ public class PlayerControl : MonoBehaviour {
 		}
 	}
 
-
+	void OnCollisionEnter(Collision other) {
+		var magnitudeThreshold = 0f;
+		Debug.Log ("Ball Velocity is: " + rb.velocity.sqrMagnitude);
+		//if (rb.velocity.sqrMagnitude > magnitudeThreshold)
+			Fabric.EventManager.Instance.PostEvent("SFX/Ball/Bounce");
+	}
 }
