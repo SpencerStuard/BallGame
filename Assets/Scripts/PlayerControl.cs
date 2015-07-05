@@ -14,6 +14,7 @@ public class PlayerControl : MonoBehaviour {
 
 	float ballPitch = 1f;
 	float ballVolume = 1f;
+	float pitchScale = 1f;
 
 	// Use this for initialization
 	void Start () {
@@ -47,14 +48,15 @@ public class PlayerControl : MonoBehaviour {
 		} else {
 			Fabric.EventManager.Instance.PostEvent("SFX/Ball/Roll", Fabric.EventAction.StopSound, gameObject);
 		}
-		//Debug.Log("Velocity: " +rb.velocity.sqrMagnitude);
+		//Debug.Log("Velocity: " + rb.velocity.sqrMagnitude);
 		var squaredNumber = 10f;
-		ballPitch = Mathf.Clamp ( 0.5f + ((rb.velocity.sqrMagnitude / (squaredNumber*squaredNumber)) * (rb.velocity.sqrMagnitude / (squaredNumber*squaredNumber))), 0.5f, 3.5f);
-		Debug.Log("Pitch: " +ballPitch);
+		pitchScale = rb.velocity.sqrMagnitude / (squaredNumber*squaredNumber);
+		ballPitch = Mathf.Clamp ( 0.5f + (pitchScale), 0.5f, 3.5f);
+		//Debug.Log("Pitch: " + ballPitch);
 		//ballVolume = Mathf.Clamp ( 0.5f + ((rb.velocity.sqrMagnitude / (squaredNumber*squaredNumber)) * (rb.velocity.sqrMagnitude / (squaredNumber*squaredNumber))), 0.5f, 10f);
 		//Debug.Log("Volume: " +ballVolume);
 		Fabric.EventManager.Instance.PostEvent("SFX/Ball/Roll", Fabric.EventAction.SetPitch, ballPitch , gameObject);
-		Fabric.EventManager.Instance.PostEvent("SFX/Ball/Roll", Fabric.EventAction.SetVolume, ballVolume , gameObject);
+		//Fabric.EventManager.Instance.PostEvent("SFX/Ball/Roll", Fabric.EventAction.SetVolume, ballVolume , gameObject);
 	
 	}
 
@@ -116,8 +118,8 @@ public class PlayerControl : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision other) {
-		var magnitudeThreshold = 0f;
-		Debug.Log ("Ball Velocity is: " + rb.velocity.sqrMagnitude);
+		//var magnitudeThreshold = 0f;
+		//Debug.Log ("Ball Velocity is: " + rb.velocity.sqrMagnitude);
 		//if (rb.velocity.sqrMagnitude > magnitudeThreshold)
 			Fabric.EventManager.Instance.PostEvent("SFX/Ball/Bounce");
 	}

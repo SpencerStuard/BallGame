@@ -154,6 +154,30 @@
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
+ <Reference Include="Fabric.AudioSpline">
+ <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Fabric.AudioSpline.dll</HintPath>
+ </Reference>
+ <Reference Include="Fabric.Core">
+ <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Fabric.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="Fabric.LoudnessMeter">
+ <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Fabric.LoudnessMeter.dll</HintPath>
+ </Reference>
+ <Reference Include="Fabric.ModularSynth">
+ <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Fabric.ModularSynth.dll</HintPath>
+ </Reference>
+ <Reference Include="Fabric.AudioSpline.Editor">
+ <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Editor/Fabric.AudioSpline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Fabric.Core.Editor">
+ <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Editor/Fabric.Core.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Fabric.LoudnessMeter.Editor">
+ <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Editor/Fabric.LoudnessMeter.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Fabric.ModularSynth.Editor">
+ <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Editor/Fabric.ModularSynth.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
@@ -180,30 +204,6 @@
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="Fabric.AudioSpline.Editor">
- <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Editor/Fabric.AudioSpline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Fabric.LoudnessMeter.Editor">
- <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Editor/Fabric.LoudnessMeter.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Fabric.LoudnessMeter">
- <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Fabric.LoudnessMeter.dll</HintPath>
- </Reference>
- <Reference Include="Fabric.Core">
- <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Fabric.Core.dll</HintPath>
- </Reference>
- <Reference Include="Fabric.AudioSpline">
- <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Fabric.AudioSpline.dll</HintPath>
- </Reference>
- <Reference Include="Fabric.ModularSynth">
- <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Fabric.ModularSynth.dll</HintPath>
- </Reference>
- <Reference Include="Fabric.Core.Editor">
- <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Editor/Fabric.Core.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Fabric.ModularSynth.Editor">
- <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Editor/Fabric.ModularSynth.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

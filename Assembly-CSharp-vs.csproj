@@ -144,14 +144,14 @@
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
- <Reference Include="Fabric.LoudnessMeter">
- <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Fabric.LoudnessMeter.dll</HintPath>
+ <Reference Include="Fabric.AudioSpline">
+ <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Fabric.AudioSpline.dll</HintPath>
  </Reference>
  <Reference Include="Fabric.Core">
  <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Fabric.Core.dll</HintPath>
  </Reference>
- <Reference Include="Fabric.AudioSpline">
- <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Fabric.AudioSpline.dll</HintPath>
+ <Reference Include="Fabric.LoudnessMeter">
+ <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Fabric.LoudnessMeter.dll</HintPath>
  </Reference>
  <Reference Include="Fabric.ModularSynth">
  <HintPath>/Users/mantalayer/Repositories/BallGame/Assets/Fabric/Fabric.ModularSynth.dll</HintPath>
